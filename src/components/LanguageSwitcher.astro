@@ -4,8 +4,9 @@ interface Props {
 }
 
 const { lang } = Astro.props;
+const base = import.meta.env.BASE_URL;
 const otherLang = lang === 'en' ? 'fr' : 'en';
-const otherLangUrl = lang === 'en' ? '/fr/' : '/';
+const otherLangUrl = lang === 'en' ? `${base}fr/` : `${base}`;
 const otherLangLabel = lang === 'en' ? 'FR' : 'EN';
 ---
 
